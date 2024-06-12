@@ -120,6 +120,17 @@ function equalOperation() {
     currentOperation = null;
   }
 }
+function backspaceOperation() {
+  let currentDisplay = dispResult.textContent;
+  let splText = currentDisplay.split("");
+
+  if (splText.length === 1) {
+    dispResult.textContent = "0";
+  } else {
+    let rmvLast = splText.slice(0, -1);
+    dispResult.textContent = rmvLast.join("");
+  }
+}
 
 let firstNumber = null;
 //let operator = null;
@@ -177,9 +188,17 @@ function keyboardFunc(key) {
     displayNum(key);
   } else if (key === "=") {
     equalOperation();
+  } else if (key === "Backspace") {
+    backspaceOperation();
   } else if (isNaN(Number(key))) {
     return;
   } else {
     displayNum(key);
   }
 }
+
+const backspace = document.querySelector("#Backspace");
+
+backspace.addEventListener("click", () => {
+  backspaceOperation();
+});

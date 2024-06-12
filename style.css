@@ -1,3 +1,32 @@
-/*<button id="Equal">=</button>
-//<button id="Clear">CLEAR</button>
-<div class="display-result" id="result">00000</div>
+* {
+  font-size: 20px;
+  font-family: "Lato", sans-serif;
+}
+
+.calculator {
+  background-color: #274c77;
+  border-radius: 1rem;
+  padding: 1.5em;
+  box-shadow: 20px 20px 15px 0 #ababab4d;
+  gap: 0.8rem;
+}
+
+.body-cal {
+  height: 100vh;
+}
+
+.display-result {
+  background-color: aliceblue;
+  width: 100%;
+  padding: 8px 20px;
+  height: 50px;
+}
+
+button {
+  font-size: 20px;
+  border-radius: 0.25rem;
+  width: 80px;
+  border: 2px solid gray;
+  background-color: aliceblue;
+  margin: 0.1em;
+}
